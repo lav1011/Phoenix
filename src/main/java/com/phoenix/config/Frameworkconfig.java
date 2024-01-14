@@ -1,5 +1,7 @@
 package com.phoenix.config;
 
+import com.phoenix.emuns.RemoteModeType;
+import com.phoenix.emuns.RunModeType;
 import org.aeonbits.owner.Config;
 
 
@@ -21,4 +23,9 @@ public interface Frameworkconfig extends Config {
     @Key ("${environment}.Url")
     String url();
 
+    @Key("runmode")
+    RunModeType browserRunMode();
+
+    @Key("browserRemoteMode")
+    RemoteModeType browserRemote();
 }
